@@ -18,4 +18,5 @@ int main(void)
 	
 	printf("%s, b = %d\n", a, b);
 	free(a);
+	
 }
