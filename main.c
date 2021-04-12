@@ -25,18 +25,29 @@ int main(ac, **av)
 void shell(int a, **av)
 {
 	char *e;
+	char *d;
+	int b;
 
 	if (a == 1)
 	{
 		/** to do */
-		run(av++);
+		b = run(av++);
 		exit;
 	}
 	if (a == 2)
 	{
 		getline(stdin, e, 1024);
-		run(e);
+		d = strtok(e, " \t");
+		b = run(d);
 		free(e);
-		shell(a, z);
+		free(d);
+		// to do
+		if (d != ??)
+			shell(a, z);
 	}
+}
+int run(*e)
+{
+	int i;
+
 }
