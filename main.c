@@ -1,30 +1,42 @@
 #include "simpleshell.h"
 
 /**
- *
+ * main - displays a prompt and waits for user to enter a command
  *
  *
  */
 int main(ac, **av)
 {
 	int a;
-	int z;
 
 	if (ac > 1)
+		a = 1;
+	else
+		a = 2;
+	shell(a, av);
+	return (EXIT_SUCCESS);
+}
+
+/**
+ *
+ *
+ *
+ */
+void shell(int a, **av)
+{
+	char *e;
+
+	if (a == 1)
 	{
-		z = 1;
-		a = open(av[1], O_RDONLY);
-		if (a == -1)
-		{
-			/** to do */
-			printf("Error while reading file");
-			return (101);
-		}
 		/** to do */
+		run(av++);
+		exit;
+	}
+	if (a == 2)
+	{
+		getline(stdin, e, 1024);
+		run(e);
+		free(e);
 		shell(a, z);
 	}
-	else
-		z = 2;
-	shell(a, stdin, z);
-	return (EXIT_SUCCESS);
 }
