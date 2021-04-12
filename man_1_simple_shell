@@ -1,0 +1,29 @@
+./" Manpage for shell
+.TH man 1 "10 april 2021" "1.0" "shell man page"
+.SH NAME
+shell - command interpreter (shell)
+.SH SYNOPSIS
+shell [-aCefnuvxIimqVEbp] [+aCefnuvxIimqVEbp] [-o option_name]
+          [+o option_name] [command_file [argument ...]]
+.SH DESCRIPTION
+shell is the standard command interpreter for the system.  The current
+     version of shell is in the process of being changed to conform with the
+     POSIX 1003.2 and 1003.2a specifications for the shell.
+.SH OPTIONS
+-c string 
+If the -c option is present, then commands are read from string. If there are arguments after the string, they are assigned to the positional parameters, starting with $0. 
+-i 
+If the -i option is present, the shell is interactive. 
+-l 
+Make bash act as if it had been invoked as a login shell (see INVOCATION below). 
+-r 
+If the -r option is present, the shell becomes restricted (see RESTRICTED SHELL below). 
+-s 
+If the -s option is present, or if no arguments remain after option processing, then commands are read from the standard input. This option allows the positional parameters to be set when invoking an interactive shell. 
+-D 
+A list of all double-quoted strings preceded by $ is printed on the standard output. These are the strings that are subject to language translation when the current locale is not C or POSIX. This implies the -n option; no commands will be executed. 
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+written by Mahdi Boulifa & Basem Bn Yahya & Ahmed Zitouni
