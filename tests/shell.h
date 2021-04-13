@@ -54,9 +54,11 @@ void errors(int error);
 /* utility functions */
 void _puts(char *str);
 int _strlen(char *s);
-int _strcmp(char *name, char *variable, unsigned int length);
+int _strcmp(char *name, char *variable);
 int _strncmp(char *name, char *variable, unsigned int length);
 char *_strcpy(char *dest, char *src);
+unsigned int _strcspn(char *s, char *accepte);
+
 
 /* prototypes for builtins */
 int shell_env(void);
