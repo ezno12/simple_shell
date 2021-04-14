@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * main - main loop of shell
- * Return: 0 on success
+ * Return: 0 on success.
  */
 int main(void)
 {
