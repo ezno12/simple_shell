@@ -2,7 +2,7 @@
 
 /**
  * gettline - reads input and stores
- * 
+ * @a: input direction
  * Return: pointer to string
  */
 
