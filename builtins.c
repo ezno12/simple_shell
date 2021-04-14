@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * shell_exit - exits the shell
- * Return: void
+ * Return: void.
  */
 
 int shell_exit(void)
