@@ -5,7 +5,7 @@ Basic Linux shell implemented with C, using basic system calls and libraries. A 
 ## Features
 * Executing normal Linux commands found in the PATH variable paths.
 * Command lines with arguments
-* the env built-in, that prints the current environment
+* the env built-in, that prints the current environment.
 * The internal shell command "exit" which terminates the shell
 
 ## Compiling
