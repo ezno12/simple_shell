@@ -3,7 +3,7 @@
 /**
  * _strcmp - compares two strings to find out if they are exactly the same
  * @name: name supplied by user to search for
- * @variable: variable to compare against
+ * @variable: variable to compare against.
  * @length: length of name
  * Return: 1 if strings are equal, -1 if they are not
  */
