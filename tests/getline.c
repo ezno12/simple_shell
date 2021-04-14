@@ -1,29 +1,22 @@
-#define H
-void *ralloc(void *ptr, unsigned int old_size, unsigned int new_size);
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-// not done yet
-/**
- * prompt - reads input
- *
- * Return: pointer to string
- */
-int gettline(char **line, int a)
-{
-	int i = 0, j = 0, k = 1;
-	char *e;
+#include "shell.h"
 
-	e = malloc(sizeof(char) * i);
-	while ((j = read(stdin, &e, i)) > 0)
+/**
+ * _getline - puts input from user into buffer line
+ * @fp: buffer for user input
+ * Return: buffer with user input
+ */
+char *_getline(int fd)
+{
+	char *line;
+	ssize_t read;
+
+	line = NULL;
+	read = gettline(&line, fd);
+	if (read == -1)
 	{
-		e = ralloc
-		i++;
+		free(line);
+		exit(EXIT_SUCCESS);
 	}
-	//	e = ralloc;
-	//read(stdin, ent, 1024);
-	//printf("%s\n", ent);
-	printf("just i = %d\n", i);
-	free(e);
-	return (0);
+
+	return (line);
 }

@@ -1,5 +1,4 @@
-#include "holberton.h"
-#include <stdlib.h>
+#include "shell.h"
 
 /**
  * ralloc - reallocs with malloc and free

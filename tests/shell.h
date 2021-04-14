@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 #define BUFFER 1024
 #define TRUE 1
@@ -45,20 +46,21 @@ typedef struct built_s
 } built_s;
 
 void prompt(int fd, struct stat buf);
-char *_getline(FILE *fp);
+char *_getline(int fp);
 char **tokenizer(char *str);
 char *_which(char *command, char *fullpath, char *path);
 int child(char *fullpath, char **tokens);
 void errors(int error);
+void no_signal(int signul);
+void *ralloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int gettline(char **line, int a);
 
 /* utility functions */
 void _puts(char *str);
 int _strlen(char *s);
-int _strcmp(char *name, char *variable);
+int _strcmp(char *name, char *variable, unsigned int length);
 int _strncmp(char *name, char *variable, unsigned int length);
 char *_strcpy(char *dest, char *src);
-unsigned int _strcspn(char *s, char *accepte);
-
 
 /* prototypes for builtins */
 int shell_env(void);
