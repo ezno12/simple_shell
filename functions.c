@@ -15,7 +15,6 @@ int _strcmp(char *name, char *variable, unsigned int length)
 	var_length = _strlen(variable);
 	if (var_length != length)
 		return (-1);
-
 	i = 0;
 	while (name[i] != '\0' && variable[i] != '\0')
 	{
