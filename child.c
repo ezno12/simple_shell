@@ -23,10 +23,12 @@ int child(char *fullpath, char **tokens)
 	{
 		execve_status = execve(fullpath, tokens, envp);
 		if (execve_status == -1)
-			return (-1);
+		{
+			errors(2);
+			exit(EXIT_SUCCESS);
+		}
 	}
 	else
 		wait(&status);
-
 	return (0);
 }

@@ -7,14 +7,15 @@ int main(void)
 {
 	char *line, *path, *fullpath;
 	char **tokens;
-	int flag, builtin_status, child_status;
+	int flag, builtin_status;
 	struct stat buf;
 
 	while (TRUE)
 	{
-		prompt(STDIN_FILENO, buf);
+		if ((isatty(STDIN_FILENO)))
+			prompt(STDIN_FILENO, buf);
 		signal(SIGINT, no_signal);
-		line = _getline(stdin);
+		line = gettline(STDIN_FILENO);
 		if (_strcmp(line, "\n", 1) == 0)
 		{
 			free(line);
@@ -40,9 +41,7 @@ int main(void)
 			fullpath = tokens[0];
 		else
 			flag = 1; /* if fullpath was malloc'd, flag to free */
-		child_status = child(fullpath, tokens);
-		if (child_status == -1)
-			errors(2);
+		child(fullpath, tokens);
 		free_all(tokens, path, line, fullpath, flag);
 	}
 	return (0);
