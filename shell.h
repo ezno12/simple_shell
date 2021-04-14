@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 #define BUFFER 1024
 #define TRUE 1
@@ -50,6 +51,7 @@ char **tokenizer(char *str);
 char *_which(char *command, char *fullpath, char *path);
 int child(char *fullpath, char **tokens);
 void errors(int error);
+void no_signal(int signul);
 
 /* utility functions */
 void _puts(char *str);

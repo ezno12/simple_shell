@@ -13,6 +13,7 @@ int main(void)
 	while (TRUE)
 	{
 		prompt(STDIN_FILENO, buf);
+		signal(SIGINT, no_signal);
 		line = _getline(stdin);
 		if (_strcmp(line, "\n", 1) == 0)
 		{
