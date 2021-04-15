@@ -1,19 +1,21 @@
-./" Manpage for shell
-.    man 1 "10 april 2021" "1.0" "shell man page"
-.HSH NAME
-shell - command interpreter (shell)
-.HSH SYNOPSIS
+.Dd april 15, 2021
+.Os
+.Dt SHELL 1
+.Sh NAME
+.Nm sh
+.Nd command interpreter (shell)
+.Sh SYNOPSIS
 shell [-aCefnuvxIimqVEbp] [+aCefnuvxIimqVEbp] [-o option_name]
           [+o option_name] [command_file [argument ...]]
-.HSH DESCRIPTION
+.SH DESCRIPTION
 shell is the standard command interpreter for the system.  The current
      version of shell is in the process of being changed to conform with the
      POSIX 1003.2 and 1003.2a specifications for the shell.
-.HSH BUILTINS
+.SH BUILTINS
 - exit: terminates the shell.
 - env: prints environment. 
 
-.HSH BUGS
+.SH BUGS
 - exit status not handled.
 - setenv and unsetenv not handled.
 - alias not handled.
@@ -25,5 +27,5 @@ shell is the standard command interpreter for the system.  The current
 - help [BUILTIN] not handled.
 - history not handled.
 - file as command line argument not handled. 
-.HSH AUTHORS
+.SH AUTHORS
 written by Mehdi Boulifa & Bassem Ben Yahya & Ahmed Zitouni
